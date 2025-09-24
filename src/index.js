@@ -11,6 +11,13 @@ function clearAll() {
   content.textContent = '';
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  clearAll();
+  const elements = home.loadHome();
+  elements.forEach((ele) => ele.classList.add('animate-in'));
+  content.append(...elements);
+});
+
 homeBtn.addEventListener('click', () => {
   clearAll();
   const elements = home.loadHome();
