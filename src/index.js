@@ -1,6 +1,7 @@
 import './styles.css';
 import { home } from './home';
 import { menu } from './menu';
+import { about } from './about';
 
 const content = document.getElementById('content');
 const homeBtn = document.querySelector('.home-btn');
@@ -34,4 +35,7 @@ menuBtn.addEventListener('click', () => {
 
 aboutBtn.addEventListener('click', () => {
   clearAll();
+  const aboutContainer = about.load();
+  aboutContainer.classList.add('animate-in');
+  content.append(aboutContainer);
 });
